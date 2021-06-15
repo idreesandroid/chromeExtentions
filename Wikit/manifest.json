@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "wikit",
+    "version": "1.0",
+    "description" : "this ap will use to link difficult words with wikipedia",
+    "icons" : {
+        "128" : "wk128.png",
+        "48" : "wk48.png",
+        "16" : "wk16.png"
+    },
+    "background" : {
+        "scripts" : ["eventPage.js"],
+        "persistent" : false
+    },
+    "permissions" : [
+        "tabs",
+        "contextMenus"
+    ]
+}

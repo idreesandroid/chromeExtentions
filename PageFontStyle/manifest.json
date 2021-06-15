@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "Page Font Style",
+	"description": "this extension will add the style for particualar page",
+	"version":"1.0",
+	"content_scripts": [{
+		"matches" : ["https://www.youtube.com/*"],
+		"js": ["content.js","jquery.js"],
+		"css" : ["content.css"]
+	}],
+	"icons" : {
+		"128" : "pf128.png",
+		"48" : "pf48.png",
+		"16" : "pf16.png"
+		},
+	"page_action" : {
+		"default_icon" : "pf16.png",
+		"default_popup" : "popup.html",
+		"default_title" : "Page Font Style"
+	},
+	"background" : {
+		"scripts" : ["eventPage.js"],
+		"persistent" : false
+	},
+	"permissions" : [
+		"tabs","https://www.youtube.com/*"
+	]
+}

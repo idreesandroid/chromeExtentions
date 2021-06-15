@@ -1,0 +1,27 @@
+{
+	"manifest_version":2,
+	"name":"Budget Manager",
+	"version":"1.0",
+	"description":"This extension track your budget!",	
+	"content_scripts": [{
+		"matches" : ["<all_urls>"],
+		"js": ["content.js"]
+	}],
+	"icons": {
+		"128":"bm128.png",
+		"48":"bm48.png",
+		"16":"bm16.png"
+	},
+	"browser_action":{
+		"default_icon":"bm16.png",
+		"default_popup":"popup.html"
+	},
+	"options_page" : "options.html",
+	"background" : {
+		"scripts" : ["eventPage.js"],
+		"persistent" : false
+	},
+	"permissions": [
+		"storage", "notifications", "contextMenus"
+	]
+}
